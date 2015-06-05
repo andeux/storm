@@ -10,7 +10,7 @@
   :javac-options {:debug "true" :fork "true"}
   :resources-path "conf"
   :dev-resources-path "src/dev"
-  :repositories {"sonatype" "http://oss.sonatype.org/content/groups/public/"}
+  :repositories {"sonatype" "https://oss.sonatype.org/content/groups/public/"}
   :dependencies [[org.clojure/clojure "1.4.0"]
                  [commons-io "1.4"]
                  [org.apache.commons/commons-exec "1.1"]
