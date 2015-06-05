@@ -10,18 +10,21 @@
   :javac-options {:debug "true" :fork "true"}
   :resources-path "conf"
   :dev-resources-path "src/dev"
-  :repositories {"sonatype" "https://oss.sonatype.org/content/groups/public/"}
+  :repositories {
+		 "sonatype" "https://oss.sonatype.org/content/repositories/releases/org/"
+  		 "apache" "http://central.maven.org/maven2/"
+	         "clojars" "https://clojars.org/repo/"}
   :dependencies [[org.clojure/clojure "1.4.0"]
-                 [commons-io "1.4"]
+                 [commons-io/commons-io "1.4"]
                  [org.apache.commons/commons-exec "1.1"]
-                 [storm/libthrift7 "0.7.0"]
-                 [clj-time "0.4.1"]
+                 [org.apache.thrift/libthrift "0.7.0"]
+                 [clj-time/clj-time "0.4.1"]
                  [log4j/log4j "1.2.16"]
                  [com.netflix.curator/curator-framework "1.0.1"]
-                 [backtype/jzmq "2.1.0"]
+                 [org.zeromq/jzmq "2.1.0"]
                  [com.googlecode.json-simple/json-simple "1.1"]
-                 [compojure "1.1.3"]
-                 [hiccup "0.3.6"]
+                 [compojure/compojure "1.1.3"]
+                 [hiccup hiccup "0.3.6"]
                  [ring/ring-jetty-adapter "0.3.11"]
                  [org.clojure/tools.logging "0.2.3"]
                  [org.clojure/math.numeric-tower "0.0.1"]
@@ -35,7 +38,7 @@
                  [com.google.guava/guava "13.0"]
                  ]
   :dev-dependencies [
-                     [swank-clojure "1.4.0-SNAPSHOT" :exclusions [org.clojure/clojure]]
+                     [swank-clojure/swank-clojure "1.4.0-SNAPSHOT" :exclusions [org.clojure/clojure]]
                     ]
   :jvm-opts ["-Djava.library.path=/usr/local/lib:/opt/local/lib:/usr/lib"]
   :extra-classpath-dirs ["src/ui"]
